@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Zoom Integration Extension",
+    "version": "1.0",
+    "description": "An extension to integrate with Zoom.",
+    "permissions": [
+      "identity", 
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "90": "icons/group.png",
+        "96": "icons/zoom.png"
+      }
+    },
+    "oauth2": {
+      "client_id": "76453599055-0re6232f9ujvv5e578r7jl06uelfmb1a.apps.googleusercontent.com",
+      "scopes": ["https://www.googleapis.com/auth/meetings.space.created"]
+    }
+  }
