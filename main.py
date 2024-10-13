@@ -1,13 +1,13 @@
 import cv2
 import numpy as np
+import tensorflow as tf
 from deepface import DeepFace
-import speech_recognition as sr
-from tensorflow.keras.models import load_model
+import keras
 from google.cloud import texttospeech
 import os
 
 # Load the pre-trained ASL recognition model (binary-weighted)
-asl_model = load_model("Real-time-Sign-Language-Recognition-Using-OpenCV-and-Deep-Learning/model-bw.h5")
+asl_model = keras.models.load_model("Real-time-Sign-Language-Recognition-Using-OpenCV-and-Deep-Learning/keras_model.h5")
 
 # Function to detect emotion from a frame using DeepFace
 def detect_emotion(frame):
